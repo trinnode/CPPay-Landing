@@ -11,9 +11,9 @@ export default {
           700: "#1d4ed8",
         },
         cppay: {
-          purple: "#4D1B64",
-          "purple-dark": "#3D1452",
-          "purple-light": "#5D2B74",
+          purple: "#0b1932",
+          "purple-dark": "#0f172a",
+          "purple-light": "#1f2937",
         },
       },
       fontFamily: {

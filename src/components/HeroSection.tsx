@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-transparent z-20">
       <div className="absolute inset-0 bg-white/90 rounded-3xl mx-4 md:mx-8 lg:mx-12 my-8"></div>
-      
+
       {/* Subtle Background Animation - FIXED Z-INDEX */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <motion.div
@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-20 left-1/4 w-96 h-96 bg-[#4D1B64] rounded-full blur-3xl"
+          className="absolute top-20 left-1/4 w-96 h-96 bg-[#0b1932] rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
             ease: "easeInOut",
             delay: 2,
           }}
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#5D2B74] rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#0b1932] rounded-full blur-3xl"
         />
       </div>
 
@@ -78,7 +78,7 @@ const HeroSection: React.FC = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-caro-pro font-bold text-gray-900 mb-6 leading-tight"
             >
               Crypto Payments for{" "}
-              <span className="text-[#4D1B64]">Everyone in Nigeria.</span>
+              <span className="text-[#0973b4]">Everyone in Nigeria.</span>
             </motion.h1>
 
             <motion.h2
@@ -108,7 +108,7 @@ const HeroSection: React.FC = () => {
             >
               <button
                 onClick={handleGetStarted}
-                className="bg-[#4D1B64] hover:bg-[#3D1452] text-white font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#4D1B64] focus:ring-opacity-50 flex items-center justify-center text-lg"
+                className="bg-[#0973b4] hover:bg-[#0f172a] text-white font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#0973b4] focus:ring-opacity-50 flex items-center justify-center text-lg"
               >
                 Download Mobile App
                 <Download className="w-5 h-5 ml-2" />
@@ -116,7 +116,7 @@ const HeroSection: React.FC = () => {
 
               <button
                 onClick={handleScanToDownload}
-                className="border-2 border-[#4D1B64] text-[#4D1B64] hover:bg-purple-50 font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center text-lg"
+                className="border-2 border-[#0973b4] text-[#0973b4] hover:bg-gray-100 font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center text-lg"
               >
                 <Smartphone className="w-5 h-5 mr-2" />
                 Scan QR Code
@@ -137,13 +137,13 @@ const HeroSection: React.FC = () => {
                 </span>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-2 text-gray-600">
-                <Clock className="w-5 h-5 text-[#4D1B64]" />
+                <Clock className="w-5 h-5 text-[#0b1932]" />
                 <span className="text-sm font-caro-pro font-medium">
                   Instant
                 </span>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-2 text-gray-600">
-                <Smartphone className="w-5 h-5 text-[#4D1B64]" />
+                <Smartphone className="w-5 h-5 text-[#0b1932]" />
                 <span className="text-sm font-caro-pro font-medium">
                   Mobile-first
                 </span>
@@ -183,7 +183,7 @@ const HeroSection: React.FC = () => {
                 }}
               >
                 {/* Status Bar */}
-                <div className="bg-gradient-to-r from-[#4D1B64] to-[#3D1452] px-6 py-3 flex justify-between items-center text-white text-xs font-semibold">
+                <div className="bg-gradient-to-r from-[#0b1932] to-[#0f172a] px-6 py-3 flex justify-between items-center text-white text-xs font-semibold">
                   <span>3:26</span>
                   <div className="flex gap-1">
                     <div className="w-1 h-1 bg-white rounded-full"></div>
@@ -199,11 +199,11 @@ const HeroSection: React.FC = () => {
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.4 }}
-                    className="bg-gradient-to-r from-[#4D1B64] to-[#5D2B74] rounded-3xl p-6 mb-6 shadow-lg"
+                    className="bg-gradient-to-r from-[#0973b4] to-[#03598f] rounded-3xl p-6 mb-6 shadow-lg"
                   >
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <p className="text-purple-100 text-xs font-caro-pro mb-1">
+                        <p className="text-gray-300 text-xs font-caro-pro mb-1">
                           Available Balance
                         </p>
                         <p className="text-white text-3xl font-caro-pro font-bold">
@@ -211,7 +211,7 @@ const HeroSection: React.FC = () => {
                         </p>
                       </div>
                       <div className="text-right">
-                        <p className="text-purple-100 text-xs font-caro-pro">
+                        <p className="text-gray-300 text-xs font-caro-pro">
                           Transaction History
                         </p>
                         <p className="text-white text-lg">›</p>
@@ -219,12 +219,12 @@ const HeroSection: React.FC = () => {
                     </div>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
-                      className="bg-gray-900 text-[#4D1B64] px-6 py-2 rounded-full text-xs font-caro-pro font-semibold float-right"
+                      className="bg-gray-900 text-[#087ec7] px-6 py-2 rounded-full text-xs font-caro-pro font-semibold float-right"
                     >
                       + Add Money
                     </motion.button>
                     <div className="clear-both flex justify-end mt-2">
-                      <div className="w-6 h-6 bg-[#4D1B64] rounded-full border-2 border-white flex items-center justify-center">
+                      <div className="w-6 h-6 bg-[#0b1932] rounded-full border-2 border-white flex items-center justify-center">
                         <span className="text-white text-xs">✓</span>
                       </div>
                     </div>
@@ -303,7 +303,7 @@ const HeroSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="bg-slate-800 hover:bg-slate-700 rounded-xl p-4 flex flex-col items-center justify-center transition-all"
                     >
-                      <Building2 className="w-6 h-6 text-[#4D1B64] mb-2" />
+                      <Building2 className="w-6 h-6 text-[#0973b4] mb-2" />
                       <span className="text-gray-300 text-xs font-caro-pro text-center">
                         To CPPay
                       </span>
@@ -313,7 +313,7 @@ const HeroSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="bg-slate-800 hover:bg-slate-700 rounded-xl p-4 flex flex-col items-center justify-center transition-all relative"
                     >
-                      <Building2 className="w-6 h-6 text-[#4D1B64] mb-2" />
+                      <Building2 className="w-6 h-6 text-[#0973b4] mb-2" />
                       <span className="text-gray-300 text-xs font-caro-pro text-center">
                         To Bank
                       </span>
@@ -323,7 +323,7 @@ const HeroSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="bg-slate-800 hover:bg-slate-700 rounded-xl p-4 flex flex-col items-center justify-center transition-all"
                     >
-                      <Eye className="w-6 h-6 text-[#4D1B64] mb-2" />
+                      <Eye className="w-6 h-6 text-[#0973b4] mb-2" />
                       <span className="text-gray-300 text-xs font-caro-pro text-center">
                         Withdraw
                       </span>
@@ -334,7 +334,7 @@ const HeroSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="bg-slate-800 hover:bg-slate-700 rounded-xl p-4 flex flex-col items-center justify-center transition-all"
                     >
-                      <Phone className="w-6 h-6 text-[#4D1B64] mb-2" />
+                      <Phone className="w-6 h-6 text-[#0973b4] mb-2" />
                       <span className="text-gray-300 text-xs font-caro-pro text-center">
                         Airtime
                       </span>
@@ -344,7 +344,7 @@ const HeroSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="bg-slate-800 hover:bg-slate-700 rounded-xl p-4 flex flex-col items-center justify-center transition-all relative"
                     >
-                      <TrendingUp className="w-6 h-6 text-[#4D1B64] mb-2" />
+                      <TrendingUp className="w-6 h-6 text-[#0973b4] mb-2" />
                       <span className="text-gray-300 text-xs font-caro-pro text-center">
                         Data
                       </span>
@@ -357,7 +357,7 @@ const HeroSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="bg-slate-800 hover:bg-slate-700 rounded-xl p-4 flex flex-col items-center justify-center transition-all"
                     >
-                      <Plus className="w-6 h-6 text-[#4D1B64] mb-2" />
+                      <Plus className="w-6 h-6 text-[#0973b4] mb-2" />
                       <span className="text-gray-300 text-xs font-caro-pro text-center">
                         More
                       </span>
@@ -368,7 +368,7 @@ const HeroSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="bg-slate-800 hover:bg-slate-700 rounded-xl p-4 flex flex-col items-center justify-center transition-all"
                     >
-                      <Send className="w-6 h-6 text-[#4D1B64] mb-2" />
+                      <Send className="w-6 h-6 text-[#0973b4] mb-2" />
                       <span className="text-gray-300 text-xs font-caro-pro text-center">
                         Send
                       </span>
@@ -378,7 +378,7 @@ const HeroSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="bg-slate-800 hover:bg-slate-700 rounded-xl p-4 flex flex-col items-center justify-center transition-all"
                     >
-                      <DownloadIcon className="w-6 h-6 text-[#4D1B64] mb-2" />
+                      <DownloadIcon className="w-6 h-6 text-[#0973b4] mb-2" />
                       <span className="text-gray-300 text-xs font-caro-pro text-center">
                         Download
                       </span>
@@ -388,7 +388,7 @@ const HeroSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="bg-slate-800 hover:bg-slate-700 rounded-xl p-4 flex flex-col items-center justify-center transition-all"
                     >
-                      <span className="text-[#4D1B64] text-lg mb-2">⇄</span>
+                      <span className="text-[#0973b4] text-lg mb-2">⇄</span>
                       <span className="text-gray-300 text-xs font-caro-pro text-center">
                         Transfer
                       </span>
@@ -406,8 +406,8 @@ const HeroSection: React.FC = () => {
                       whileHover={{ scale: 1.1 }}
                       className="flex flex-col items-center gap-1"
                     >
-                      <span className="text-[#4D1B64] text-xl">🏠</span>
-                      <span className="text-[#4D1B64] text-xs font-caro-pro">
+                      <span className="text-[#0b1932] text-xl">🏠</span>
+                      <span className="text-gray-500 text-xs font-caro-pro">
                         Home
                       </span>
                     </motion.button>
@@ -439,7 +439,7 @@ const HeroSection: React.FC = () => {
               </div>
 
               {/* Subtle glow effect behind phone */}
-              <div className="absolute -inset-8 bg-gradient-to-r from-[#4D1B64]/10 to-[#5D2B74]/10 rounded-3xl blur-3xl -z-10"></div>
+              <div className="absolute -inset-8 bg-gradient-to-r from-[#0b1932]/10 to-[#1f2937]/10 rounded-3xl blur-3xl -z-10"></div>
             </motion.div>
           </motion.div>
         </div>

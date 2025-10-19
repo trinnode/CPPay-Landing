@@ -40,7 +40,7 @@ const InstallationGuide: React.FC = () => {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-caro-pro font-bold text-gray-900 mb-6">
             Get Started in{" "}
-            <span className="text-[#4D1B64]">4 Simple Steps</span>
+            <span className="text-[#0973b4]">4 Simple Steps</span>
           </h2>
           <p className="text-lg font-caro-pro text-gray-600 max-w-3xl mx-auto">
             Download the CPPay app and start your journey towards seamless,
@@ -92,11 +92,11 @@ const InstallationGuide: React.FC = () => {
               className="relative"
             >
               <div className="text-center">
-                <div className="w-16 h-16 bg-[#4D1B64] rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div className="w-16 h-16 bg-[#0973b4] rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                   {item.step}
                 </div>
                 <div className="mb-4">
-                  <item.icon className="w-10 h-10 text-[#4D1B64] mx-auto" />
+                  <item.icon className="w-10 h-10 text-[#0973b4] mx-auto" />
                 </div>
                 <h4 className="text-lg font-caro-pro font-semibold text-gray-900 mb-3">
                   {item.title}
@@ -106,7 +106,7 @@ const InstallationGuide: React.FC = () => {
                 </p>
               </div>
               {index < 3 && (
-                <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-cppay-blue to-cppay-purple transform -translate-x-8"></div>
+                <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-gray-800 to-gray-700 transform -translate-x-8"></div>
               )}
             </motion.div>
           ))}
@@ -132,7 +132,7 @@ const InstallationGuide: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsQRModalOpen(true)}
-              className="inline-flex items-center justify-center gap-3 bg-[#4D1B64] hover:bg-[#3D1452] text-white font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#4D1B64] focus:ring-opacity-50"
+              className="inline-flex items-center justify-center gap-3 bg-[#0973b4] hover:bg-[#0f172a] text-white font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#0973b4] focus:ring-opacity-50"
             >
               <Download className="w-5 h-5" />
               Download App

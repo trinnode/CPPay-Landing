@@ -31,7 +31,7 @@ const QRCodeModal: React.FC<QRCodeModalProps> = ({
         width: 256,
         margin: 2,
         color: {
-          dark: "#4D1B64",
+          dark: "#0b1932",
           light: "#ffffff",
         },
         errorCorrectionLevel: "M",

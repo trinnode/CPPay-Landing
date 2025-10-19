@@ -62,7 +62,7 @@ const AboutSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-caro-pro font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-caro-pro font-bold text-[#0973b4] mb-6">
             About CPPay
           </h2>
           <p className="text-lg font-caro-pro text-gray-600 max-w-3xl mx-auto">
@@ -116,26 +116,26 @@ const AboutSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="grid grid-cols-2 gap-6"
           >
-            <div className="bg-[#4D1B64]/5 rounded-xl p-6 text-center">
-              <div className="text-4xl font-caro-pro font-bold text-[#4D1B64] mb-2">
+            <div className="bg-[#0b1932]/5 rounded-xl p-6 text-center">
+              <div className="text-4xl font-caro-pro font-bold text-[#0b1932] mb-2">
                 10K+
               </div>
               <p className="text-gray-600 font-caro-pro">Active Users</p>
             </div>
-            <div className="bg-[#4D1B64]/5 rounded-xl p-6 text-center">
-              <div className="text-4xl font-caro-pro font-bold text-[#4D1B64] mb-2">
+            <div className="bg-[#0b1932]/5 rounded-xl p-6 text-center">
+              <div className="text-4xl font-caro-pro font-bold text-[#0b1932] mb-2">
                 ₦2.5B+
               </div>
               <p className="text-gray-600 font-caro-pro">Transactions</p>
             </div>
-            <div className="bg-[#4D1B64]/5 rounded-xl p-6 text-center">
-              <div className="text-4xl font-caro-pro font-bold text-[#4D1B64] mb-2">
+            <div className="bg-[#0b1932]/5 rounded-xl p-6 text-center">
+              <div className="text-4xl font-caro-pro font-bold text-[#0b1932] mb-2">
                 50+
               </div>
               <p className="text-gray-600 font-caro-pro">Countries</p>
             </div>
-            <div className="bg-[#4D1B64]/5 rounded-xl p-6 text-center">
-              <div className="text-4xl font-caro-pro font-bold text-[#4D1B64] mb-2">
+            <div className="bg-[#0b1932]/5 rounded-xl p-6 text-center">
+              <div className="text-4xl font-caro-pro font-bold text-[#0b1932] mb-2">
                 24/7
               </div>
               <p className="text-gray-600 font-caro-pro">Support</p>
@@ -151,7 +151,7 @@ const AboutSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h3 className="text-2xl md:text-3xl font-caro-pro font-bold text-center text-gray-900 mb-12">
+          <h3 className="text-2xl md:text-3xl font-caro-pro font-bold text-center text-[#0973b4] mb-12">
             Why Choose CPPay?
           </h3>
           <motion.div
@@ -165,10 +165,10 @@ const AboutSection: React.FC = () => {
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#4D1B64] hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#0b1932] hover:shadow-lg transition-all duration-300"
               >
                 <div className="mb-4">
-                  <feature.icon className="w-12 h-12 text-[#4D1B64]" />
+                  <feature.icon className="w-12 h-12 text-[#0973b4]" />
                 </div>
                 <h4 className="text-lg font-caro-pro font-semibold text-gray-900 mb-3">
                   {feature.title}
@@ -187,7 +187,7 @@ const AboutSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-[#4D1B64]/5 rounded-2xl p-8 md:p-12 text-center"
+          className="bg-[#0b1932]/5 rounded-2xl p-8 md:p-12 text-center"
         >
           <h3 className="text-2xl md:text-3xl font-caro-pro font-bold text-gray-900 mb-4">
             Join the Revolution
@@ -200,7 +200,7 @@ const AboutSection: React.FC = () => {
             href="#installation"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block bg-[#4D1B64] hover:bg-[#3D1452] text-white font-caro-pro font-semibold py-3 px-8 rounded-lg transition-all duration-200"
+            className="inline-block bg-[#0973b4] hover:bg-[#0f172a] text-white font-caro-pro font-semibold py-3 px-8 rounded-lg transition-all duration-200"
           >
             Get Started Now
           </motion.a>

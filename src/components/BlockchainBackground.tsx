@@ -31,7 +31,7 @@ const BlockchainBackground: React.FC = React.memo(() => {
       }}
     >
       {/* Base gradient - BOLD */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#4D1B64]/15 via-transparent to-[#4D1B64]/15"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0973b4]/15 via-transparent to-[#0973b4]/15"></div>
 
       {/* Large blur orbs - VERY VISIBLE */}
       <motion.div
@@ -44,7 +44,7 @@ const BlockchainBackground: React.FC = React.memo(() => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#4D1B64] rounded-full blur-3xl opacity-[0.35]"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#0973b4] rounded-full blur-3xl opacity-[0.35]"
       />
 
       <motion.div
@@ -58,14 +58,14 @@ const BlockchainBackground: React.FC = React.memo(() => {
           ease: "easeInOut",
           delay: 4,
         }}
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#4D1B64] rounded-full blur-3xl opacity-[0.35]"
+        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#0973b4] rounded-full blur-3xl opacity-[0.35]"
       />
 
       {/* Animated particles - VERY VISIBLE */}
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-[#4D1B64]"
+          className="absolute rounded-full bg-[#0973b4]"
           style={{
             width: particle.size,
             height: particle.size,
@@ -93,8 +93,8 @@ const BlockchainBackground: React.FC = React.memo(() => {
       >
         <defs>
           <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#4D1B64" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#4D1B64" stopOpacity="0.3" />
+            <stop offset="0%" stopColor="#0973b4" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#0973b4" stopOpacity="0.3" />
           </linearGradient>
         </defs>
         <line
@@ -126,7 +126,7 @@ const BlockchainBackground: React.FC = React.memo(() => {
           cy="40%"
           r="120"
           fill="none"
-          stroke="#4D1B64"
+          stroke="#0973b4"
           strokeWidth="1"
           opacity="0.4"
         />
@@ -135,7 +135,7 @@ const BlockchainBackground: React.FC = React.memo(() => {
           cy="60%"
           r="100"
           fill="none"
-          stroke="#4D1B64"
+          stroke="#0973b4"
           strokeWidth="1"
           opacity="0.4"
         />

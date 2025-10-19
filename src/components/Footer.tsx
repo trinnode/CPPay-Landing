@@ -21,8 +21,8 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { name: "Twitter", icon: Twitter, href: "https://twitter.com/cppay" },
-    { name: "GitHub", icon: Github, href: "https://github.com/cppay" },
+    { name: "Twitter", icon: Twitter, href: "https://twitter.com/cp-pay" },
+    { name: "GitHub", icon: Github, href: "https://github.com/CP-Pay" },
     {
       name: "LinkedIn",
       icon: Linkedin,
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white relative z-20 w-full">
+    <footer className="bg-[#0b1932] text-white relative z-20 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800 hover:bg-[#4D1B64] rounded-lg flex items-center justify-center transition-colors duration-200 group"
+                    className="w-10 h-10 bg-gray-800 hover:bg-[#0b1932] rounded-lg flex items-center justify-center transition-colors duration-200 group"
                   >
                     <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white" />
                   </a>
@@ -137,12 +137,6 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-2 text-gray-400 text-sm mb-4 md:mb-0">
               <span>© {currentYear} CPPay. All rights reserved.</span>
             </div>
-
-            {/* <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500 fill-current" />
-              <span>in Nigeria</span>
-            </div> */}
           </div>
         </div>
       </div>

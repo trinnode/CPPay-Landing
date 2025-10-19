@@ -18,8 +18,8 @@ const FeaturesSection: React.FC = () => {
       title: "Buy Airtime",
       description:
         "Recharge your phone instantly with crypto or fiat, hassle-free.",
-      color: "text-[#4D1B64]",
-      bgColor: "bg-purple-100",
+      color: "text-[#0b1932]",
+      bgColor: "bg-gray-100",
     },
     {
       icon: Shield,
@@ -34,8 +34,8 @@ const FeaturesSection: React.FC = () => {
       title: "Secure with Guardians",
       description:
         "Protect your assets with social recovery, ensuring peace of mind.",
-      color: "text-[#4D1B64]",
-      bgColor: "bg-purple-100",
+      color: "text-[#0b1932]",
+      bgColor: "bg-gray-100",
     },
   ];
 
@@ -45,7 +45,7 @@ const FeaturesSection: React.FC = () => {
       title: "Smart Wallets",
       description:
         "Experience gasless transactions and enhanced security with our innovative Smart Wallets. Say goodbye to network fees.",
-      color: "text-[#4D1B64]",
+      color: "text-[#0b1932]",
     },
     {
       icon: Users,
@@ -59,7 +59,7 @@ const FeaturesSection: React.FC = () => {
       title: "Social Recovery",
       description:
         "Secure your assets with trusted guardians. Recover your wallet with ease, even if you lose your seed phrase.",
-      color: "text-[#4D1B64]",
+      color: "text-[#0b1932]",
     },
     {
       icon: Clock,
@@ -80,7 +80,7 @@ const FeaturesSection: React.FC = () => {
       title: "Multi-Chain Support",
       description:
         "Access CPPay services on any phone via USSD. Even without internet, you're always connected.",
-      color: "text-[#4D1B64]",
+      color: "text-[#0b1932]",
     },
   ];
 
@@ -117,7 +117,7 @@ const FeaturesSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-caro-pro font-bold text-gray-900 mb-6">
-            Why <span className="text-[#4D1B64]">CPPay</span>?
+            Why <span className="text-[#0973b4]">CPPay</span>?
           </h2>
           <p className="text-lg font-caro-pro text-gray-600 max-w-3xl mx-auto">
             Experience the next generation of financial freedom with features
@@ -176,7 +176,7 @@ const FeaturesSection: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start space-x-4 p-6 rounded-xl bg-gray-50 hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
                   <feature.icon className={`w-6 h-6 ${feature.color}`} />
                 </div>
                 <div>
@@ -246,7 +246,7 @@ const FeaturesSection: React.FC = () => {
                 className="relative"
               >
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-[#4D1B64] rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                  <div className="w-16 h-16 bg-[#0973b4] rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                     {item.step}
                   </div>
                   <h4 className="text-lg font-caro-pro font-semibold text-gray-900 mb-3">
@@ -257,14 +257,14 @@ const FeaturesSection: React.FC = () => {
                   </p>
                 </div>
                 {index < 3 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-cppay-blue to-cppay-purple transform -translate-x-8"></div>
+                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-gray-800 to-gray-700 transform -translate-x-8"></div>
                 )}
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* CTA Section */}
+        {/* CTA Section
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -282,7 +282,7 @@ const FeaturesSection: React.FC = () => {
           <button className="btn-primary text-lg px-8 py-4 font-caro-pro">
             Get Started for Free
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

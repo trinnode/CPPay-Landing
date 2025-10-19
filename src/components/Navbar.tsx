@@ -63,25 +63,25 @@ const Navbar: React.FC = () => {
               <div className="ml-10 flex items-baseline space-x-8">
                 <button
                   onClick={() => scrollToSection("home")}
-                  className="text-gray-700 hover:text-[#4D1B64] px-3 py-2 text-sm font-caro-pro font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-[#0b1932] px-3 py-2 text-sm font-caro-pro font-medium transition-colors duration-200"
                 >
                   Home
                 </button>
                 <button
                   onClick={() => scrollToSection("features")}
-                  className="text-gray-700 hover:text-[#4D1B64] px-3 py-2 text-sm font-caro-pro font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-[#0b1932] px-3 py-2 text-sm font-caro-pro font-medium transition-colors duration-200"
                 >
                   Features
                 </button>
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="text-gray-700 hover:text-[#4D1B64] px-3 py-2 text-sm font-caro-pro font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-[#0b1932] px-3 py-2 text-sm font-caro-pro font-medium transition-colors duration-200"
                 >
                   About
                 </button>
                 <button
                   onClick={() => scrollToSection("installation")}
-                  className="text-gray-700 hover:text-[#4D1B64] px-3 py-2 text-sm font-caro-pro font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-[#0b1932] px-3 py-2 text-sm font-caro-pro font-medium transition-colors duration-200"
                 >
                   Get Started
                 </button>
@@ -92,7 +92,7 @@ const Navbar: React.FC = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-[#4D1B64] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#4D1B64]"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-[#0b1932] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#0b1932]"
               >
                 {isMenuOpen ? (
                   <X className="block h-6 w-6" />
@@ -110,25 +110,25 @@ const Navbar: React.FC = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
               <button
                 onClick={() => scrollToSection("home")}
-                className="text-gray-700 hover:text-[#4D1B64] block px-3 py-2 text-base font-caro-pro font-medium w-full text-left"
+                className="text-gray-700 hover:text-[#0b1932] block px-3 py-2 text-base font-caro-pro font-medium w-full text-left"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection("features")}
-                className="text-gray-700 hover:text-[#4D1B64] block px-3 py-2 text-base font-caro-pro font-medium w-full text-left"
+                className="text-gray-700 hover:text-[#0b1932] block px-3 py-2 text-base font-caro-pro font-medium w-full text-left"
               >
                 Features
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-gray-700 hover:text-[#4D1B64] block px-3 py-2 text-base font-caro-pro font-medium w-full text-left"
+                className="text-gray-700 hover:text-[#0b1932] block px-3 py-2 text-base font-caro-pro font-medium w-full text-left"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("installation")}
-                className="text-gray-700 hover:text-[#4D1B64] block px-3 py-2 text-base font-caro-pro font-medium w-full text-left"
+                className="text-gray-700 hover:text-[#0b1932] block px-3 py-2 text-base font-caro-pro font-medium w-full text-left"
               >
                 Get Started
               </button>
@@ -141,7 +141,7 @@ const Navbar: React.FC = () => {
       {showScrollUp && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-30 bg-[#4D1B64] hover:bg-[#3D1452] text-white p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#4D1B64] focus:ring-opacity-50"
+          className="fixed bottom-8 right-8 z-30 bg-[#0b1932] hover:bg-[#0f172a] text-white p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#0b1932] focus:ring-opacity-50"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-6 h-6" />
