@@ -106,8 +106,8 @@ const FeaturesSection: React.FC = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white relative z-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 sm:py-16 lg:py-20 bg-transparent relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white/90 rounded-3xl py-8 md:py-12">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -214,27 +214,27 @@ const FeaturesSection: React.FC = () => {
             {[
               {
                 step: "1",
-                title: "Download the App",
+                title: "Download",
                 description:
-                  "Get CPPay on your Android device. No fees, no hassle, just pure convenience.",
+                  "Get CPPay on your Android device. Quick, easy, and hassle-free.",
               },
               {
                 step: "2",
-                title: "Create Smart Wallet",
+                title: "Create Wallet",
                 description:
-                  "Set up your secure, gasless wallet in minutes. No complex seed phrases needed.",
+                  "Set up your secure Smart Wallet without complex seed phrases.",
               },
               {
                 step: "3",
                 title: "Start Transacting",
                 description:
-                  "Buy airtime, pay bills, send/swap crypto in fiat without manually swapping instantly across Nigeria.",
+                  "Buy airtime, pay bills, and swap crypto to fiat instantly.",
               },
               {
                 step: "4",
-                title: "Seemless Experience",
+                title: "Seamless Experience",
                 description:
-                  "Enjoy real-time transactions and seamless crypto/fiat swaps.",
+                  "Enjoy real-time transactions and gasless crypto payments.",
               },
             ].map((item, index) => (
               <motion.div

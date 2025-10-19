@@ -1,37 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Download, Smartphone, QrCode, CheckCircle } from "lucide-react";
+import { Download, Smartphone, CheckCircle } from "lucide-react";
 import QRCodeModal from "./QRCodeModal";
 
 const InstallationGuide: React.FC = () => {
   const [isQRModalOpen, setIsQRModalOpen] = useState(false);
-
-  const steps = [
-    {
-      icon: Download,
-      title: "Download the App",
-      description:
-        "Visit Google Play Store or scan the QR code below to download CPPay on your Android device.",
-    },
-    {
-      icon: Smartphone,
-      title: "Create Your Wallet",
-      description:
-        "Set up your secure Smart Wallet in minutes without complex seed phrases.",
-    },
-    {
-      icon: CheckCircle,
-      title: "Verify Identity",
-      description:
-        "Complete a quick KYC process to unlock full transaction capabilities.",
-    },
-    {
-      icon: CheckCircle,
-      title: "Start Transacting",
-      description:
-        "Buy airtime, pay bills, and make crypto payments instantly.",
-    },
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -55,8 +28,8 @@ const InstallationGuide: React.FC = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white relative z-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 sm:py-16 lg:py-20 bg-transparent relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white/90 rounded-3xl py-8 md:py-12">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -81,30 +54,59 @@ const InstallationGuide: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+          className="grid md:grid-cols-4 gap-6 mb-16"
         >
-          {steps.map((step, index) => (
+          {[
+            {
+              step: "1",
+              icon: Download,
+              title: "Download",
+              description:
+                "Get CPPay on your Android device. Quick, easy, and hassle-free.",
+            },
+            {
+              step: "2",
+              icon: Smartphone,
+              title: "Create Wallet",
+              description:
+                "Set up your secure Smart Wallet without complex seed phrases.",
+            },
+            {
+              step: "3",
+              icon: CheckCircle,
+              title: "Start Transacting",
+              description:
+                "Buy airtime, pay bills, and swap crypto to fiat instantly.",
+            },
+            {
+              step: "4",
+              icon: CheckCircle,
+              title: "Seamless Experience",
+              description:
+                "Enjoy real-time transactions and gasless crypto payments.",
+            },
+          ].map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               className="relative"
             >
-              <div className="card p-8 text-center h-full">
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#4D1B64] rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  {index + 1}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-[#4D1B64] rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                  {item.step}
                 </div>
-                <div className="mt-6 mb-4">
-                  <step.icon className="w-10 h-10 text-[#4D1B64] mx-auto" />
+                <div className="mb-4">
+                  <item.icon className="w-10 h-10 text-[#4D1B64] mx-auto" />
                 </div>
-                <h3 className="text-lg font-caro-pro font-semibold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 font-caro-pro text-sm">
-                  {step.description}
+                <h4 className="text-lg font-caro-pro font-semibold text-gray-900 mb-3">
+                  {item.title}
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed font-caro-pro">
+                  {item.description}
                 </p>
               </div>
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-12 -right-3 w-6 h-0.5 bg-gray-300"></div>
+              {index < 3 && (
+                <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-cppay-blue to-cppay-purple transform -translate-x-8"></div>
               )}
             </motion.div>
           ))}
@@ -119,11 +121,11 @@ const InstallationGuide: React.FC = () => {
           className="bg-gray-50 rounded-3xl p-8 md:p-12 text-center mb-16"
         >
           <h3 className="text-2xl md:text-3xl font-caro-pro font-bold text-gray-900 mb-4">
-            Scan to Download
+            Click the button below to download
           </h3>
           <p className="text-gray-600 font-caro-pro mb-8 max-w-2xl mx-auto">
-            Use your phone camera to scan the QR code below and download CPPay
-            directly from the Google Play Store.
+            Get CPPay on your Android device today and start your journey
+            towards seamless, gasless payments.
           </p>
           <div className="flex justify-center">
             <motion.button
@@ -132,8 +134,8 @@ const InstallationGuide: React.FC = () => {
               onClick={() => setIsQRModalOpen(true)}
               className="inline-flex items-center justify-center gap-3 bg-[#4D1B64] hover:bg-[#3D1452] text-white font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#4D1B64] focus:ring-opacity-50"
             >
-              <QrCode className="w-5 h-5" />
-              Show QR Code
+              <Download className="w-5 h-5" />
+              Download App
             </motion.button>
           </div>
         </motion.div>
@@ -195,24 +197,6 @@ const InstallationGuide: React.FC = () => {
               </ul>
             </div>
           </div>
-        </motion.div>
-
-        {/* Download Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mt-16"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-[#4D1B64] hover:bg-[#3D1452] text-white font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#4D1B64] focus:ring-opacity-50 text-lg"
-          >
-            <Download className="w-5 h-5" />
-            Download from Google Play
-          </motion.button>
         </motion.div>
       </div>
 

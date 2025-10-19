@@ -12,20 +12,20 @@ function App() {
       {/* Blockchain Background - Full Screen */}
       <BlockchainBackground />
 
-      {/* Content Overlay - No bg-white to allow background to show through */}
+      {/* Content Overlay - Completely Transparent */}
       <div className="relative z-20">
         <Navbar />
         <main className="relative z-20">
-          <section id="home" className="relative z-20  bg-white">
+          <section id="home" className="relative z-20 bg-transparent">
             <HeroSection />
           </section>
-          <section id="features" className="relative z-20 bg-white">
+          <section id="features" className="relative z-20 bg-transparent">
             <FeaturesSection />
           </section>
-          <section id="about" className="relative z-20 bg-white">
+          <section id="about" className="relative z-20 bg-transparent">
             <AboutSection />
           </section>
-          <section id="installation" className="relative z-20 bg-white">
+          <section id="installation" className="relative z-20 bg-transparent">
             <InstallationGuide />
           </section>
         </main>

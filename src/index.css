@@ -10,7 +10,7 @@
   }
   
   body {
-    @apply bg-white text-gray-900;
+    @apply text-gray-900 bg-transparent;
     font-family: 'Cara Pro', 'Inter', system-ui, sans-serif;
   }
 

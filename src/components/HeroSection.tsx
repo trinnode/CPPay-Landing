@@ -30,7 +30,9 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-white z-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-transparent z-20">
+      <div className="absolute inset-0 bg-white/90 rounded-3xl mx-4 md:mx-8 lg:mx-12 my-8"></div>
+      
       {/* Subtle Background Animation - FIXED Z-INDEX */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <motion.div

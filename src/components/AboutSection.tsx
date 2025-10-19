@@ -52,8 +52,8 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white relative z-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 sm:py-16 lg:py-20 bg-transparent relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white/90 rounded-3xl py-8 md:py-12">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
