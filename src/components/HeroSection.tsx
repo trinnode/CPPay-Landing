@@ -75,17 +75,19 @@ const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-caro-pro font-bold text-gray-900 mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-caro-pro font-bold bg-gradient-to-r from-cppay-navy-500 to-cppay-navy-600 bg-clip-text text-transparent mb-6 leading-tight hover:from-cppay-navy-600 hover:to-cppay-navy-700 transition-all duration-300"
             >
               Crypto Payments for{" "}
-              <span className="text-[#0973b4]">Everyone in Nigeria.</span>
+              <span className="bg-gradient-to-r from-cppay-sky-500 to-cppay-sky-600 bg-clip-text text-transparent">
+                Everyone in Nigeria.
+              </span>
             </motion.h1>
 
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-caro-pro font-bold text-gray-800 mb-4"
+              className="text-2xl md:text-3xl lg:text-4xl font-caro-pro font-bold text-cppay-navy-500 mb-4 animate-fade-in-up"
             >
               Instant, Easy, and Gasless.
             </motion.h2>
@@ -94,7 +96,7 @@ const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg md:text-xl font-caro-pro text-gray-600 mb-8 max-w-2xl"
+              className="text-lg md:text-xl font-caro-pro text-cppay-text-secondary mb-8 max-w-2xl leading-relaxed"
             >
               Spend fiat without token swaps, manage multiple crypto assets, and
               enjoy gasless transactions powered by Smart Wallets.
@@ -106,21 +108,39 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
             >
-              <button
+              <motion.button
                 onClick={handleGetStarted}
-                className="bg-[#0973b4] hover:bg-[#0f172a] text-white font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#0973b4] focus:ring-opacity-50 flex items-center justify-center text-lg"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-primary bg-gradient-to-r from-cppay-sky-500 to-cppay-sky-600 hover:from-cppay-sky-600 hover:to-cppay-sky-700 text-white font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform shadow-lg shadow-cppay-sky-500/20 hover:shadow-xl hover:shadow-cppay-sky-500/30 focus:outline-none focus:ring-2 focus:ring-cppay-sky-500 focus:ring-opacity-50 flex items-center justify-center text-lg group"
               >
                 Download Mobile App
-                <Download className="w-5 h-5 ml-2" />
-              </button>
+                <motion.div
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  <Download className="w-5 h-5 ml-2 group-hover:text-cppay-sky-100" />
+                </motion.div>
+              </motion.button>
 
-              <button
+              <motion.button
                 onClick={handleScanToDownload}
-                className="border-2 border-[#0973b4] text-[#0973b4] hover:bg-gray-100 font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center text-lg"
+                whileHover={{
+                  scale: 1.05,
+                  y: -2,
+                  backgroundColor: "rgba(9, 115, 180, 0.1)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-cppay-sky-500 text-cppay-sky-500 hover:bg-cppay-sky-500/5 font-caro-pro font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center text-lg shadow-md shadow-cppay-sky-500/10 hover:shadow-lg hover:shadow-cppay-sky-500/20 focus:outline-none focus:ring-2 focus:ring-cppay-sky-500 focus:ring-opacity-50"
               >
-                <Smartphone className="w-5 h-5 mr-2" />
+                <motion.div
+                  animate={{ rotate: [0, 5, -5, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <Smartphone className="w-5 h-5 mr-2" />
+                </motion.div>
                 Scan QR Code
-              </button>
+              </motion.button>
             </motion.div>
 
             {/* Feature highlights */}
@@ -130,24 +150,48 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto lg:mx-0"
             >
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-gray-600">
-                <Shield className="w-5 h-5 text-green-500" />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center lg:justify-start space-x-2 text-cppay-text-secondary p-3 rounded-lg hover:bg-cppay-sky-500/5 transition-all duration-300"
+              >
+                <motion.div
+                  animate={{ rotate: [0, 10, -10, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <Shield className="w-5 h-5 text-cppay-success" />
+                </motion.div>
                 <span className="text-sm font-caro-pro font-medium">
                   Secure
                 </span>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-gray-600">
-                <Clock className="w-5 h-5 text-[#0b1932]" />
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center lg:justify-start space-x-2 text-cppay-text-secondary p-3 rounded-lg hover:bg-cppay-sky-500/5 transition-all duration-300"
+              >
+                <motion.div
+                  animate={{ y: [0, -4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  <Clock className="w-5 h-5 text-cppay-navy-500" />
+                </motion.div>
                 <span className="text-sm font-caro-pro font-medium">
                   Instant
                 </span>
-              </div>
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-gray-600">
-                <Smartphone className="w-5 h-5 text-[#0b1932]" />
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center lg:justify-start space-x-2 text-cppay-text-secondary p-3 rounded-lg hover:bg-cppay-sky-500/5 transition-all duration-300"
+              >
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <Smartphone className="w-5 h-5 text-cppay-navy-500" />
+                </motion.div>
                 <span className="text-sm font-caro-pro font-medium">
                   Mobile-first
                 </span>
-              </div>
+              </motion.div>
             </motion.div>
           </motion.div>
 

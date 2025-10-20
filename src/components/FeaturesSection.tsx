@@ -18,24 +18,24 @@ const FeaturesSection: React.FC = () => {
       title: "Buy Airtime",
       description:
         "Recharge your phone instantly with crypto or fiat, hassle-free.",
-      color: "text-[#0b1932]",
-      bgColor: "bg-gray-100",
+      color: "text-cppay-navy-500",
+      bgColor: "bg-cppay-navy-50",
     },
     {
       icon: Shield,
       title: "Pay Bills",
       description:
         "Settle your utility bills, subscriptions, and more with ease.",
-      color: "text-green-500",
-      bgColor: "bg-green-100",
+      color: "text-cppay-success",
+      bgColor: "bg-cppay-success-50",
     },
     {
       icon: Users,
       title: "Secure with Guardians",
       description:
         "Protect your assets with social recovery, ensuring peace of mind.",
-      color: "text-[#0b1932]",
-      bgColor: "bg-gray-100",
+      color: "text-cppay-sky-500",
+      bgColor: "bg-cppay-sky-50",
     },
   ];
 
@@ -45,42 +45,42 @@ const FeaturesSection: React.FC = () => {
       title: "Smart Wallets",
       description:
         "Experience gasless transactions and enhanced security with our innovative Smart Wallets. Say goodbye to network fees.",
-      color: "text-[#0b1932]",
+      color: "text-cppay-navy-500",
     },
     {
       icon: Users,
       title: "Multi-Wallet Management",
       description:
         "Seamlessly manage all your crypto and fiat wallets in one place. Stay organized with our single, intuitive dashboard.",
-      color: "text-green-500",
+      color: "text-cppay-success",
     },
     {
       icon: Shield,
       title: "Social Recovery",
       description:
         "Secure your assets with trusted guardians. Recover your wallet with ease, even if you lose your seed phrase.",
-      color: "text-[#0b1932]",
+      color: "text-cppay-sky-500",
     },
     {
       icon: Clock,
       title: "Batch Payments",
       description:
         "Streamline your payments. Pay multiple bills, subscriptions, or salaries in just one signature. Save time.",
-      color: "text-orange-500",
+      color: "text-cppay-warning",
     },
     {
       icon: Zap,
       title: "USSD Fallback",
       description:
         "Access CPPay services on any phone via USSD. Even without internet, you're always connected.",
-      color: "text-yellow-500",
+      color: "text-cppay-info",
     },
     {
       icon: Globe,
       title: "Multi-Chain Support",
       description:
         "Access CPPay services on any phone via USSD. Even without internet, you're always connected.",
-      color: "text-[#0b1932]",
+      color: "text-cppay-navy-500",
     },
   ];
 
@@ -116,10 +116,14 @@ const FeaturesSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-caro-pro font-bold text-gray-900 mb-6">
-            Why <span className="text-[#0973b4]">CPPay</span>?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-caro-pro font-bold bg-gradient-to-r from-cppay-navy-500 to-cppay-navy-600 bg-clip-text text-transparent mb-6">
+            Why{" "}
+            <span className="bg-gradient-to-r from-cppay-sky-500 to-cppay-sky-600 bg-clip-text text-transparent">
+              CPPay
+            </span>
+            ?
           </h2>
-          <p className="text-lg font-caro-pro text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg font-caro-pro text-cppay-text-secondary max-w-3xl mx-auto">
             Experience the next generation of financial freedom with features
             designed for simplicity, security, and efficiency.
           </p>
@@ -137,17 +141,20 @@ const FeaturesSection: React.FC = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="card p-8 text-center group hover:scale-105 transition-all duration-300"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="card p-8 text-center group bg-white/70 backdrop-blur-sm hover:bg-white/90 hover:shadow-xl hover:shadow-cppay-sky-500/10 transition-all duration-300 border border-cppay-border/50 hover:border-cppay-sky-500/30"
             >
-              <div
-                className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
+              <motion.div
+                whileHover={{ scale: 1.15, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 200 }}
+                className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-300`}
               >
                 <feature.icon className={`w-8 h-8 ${feature.color}`} />
-              </div>
-              <h3 className="text-xl font-caro-pro font-semibold text-gray-900 mb-4">
+              </motion.div>
+              <h3 className="text-xl font-caro-pro font-semibold text-cppay-text mb-4">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 font-caro-pro">
+              <p className="text-cppay-text-secondary font-caro-pro">
                 {feature.description}
               </p>
             </motion.div>
@@ -162,7 +169,7 @@ const FeaturesSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h3 className="text-2xl md:text-3xl font-caro-pro font-bold text-center text-gray-900 mb-12">
+          <h3 className="text-2xl md:text-3xl font-caro-pro font-bold text-center text-cppay-navy-500 mb-12">
             Unleash the Power of CPPay
           </h3>
 
@@ -174,16 +181,20 @@ const FeaturesSection: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-start space-x-4 p-6 rounded-xl bg-gray-50 hover:shadow-lg transition-all duration-300"
+                whileHover={{ x: index % 2 === 0 ? 8 : -8, scale: 1.02 }}
+                className="flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-br from-cppay-sky-50/30 to-white hover:from-cppay-sky-50/60 hover:to-cppay-sky-50/30 hover:shadow-lg hover:shadow-cppay-sky-500/10 transition-all duration-300 border border-cppay-border/30 hover:border-cppay-sky-500/20"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  className="flex-shrink-0 w-12 h-12 bg-cppay-sky-100 rounded-xl flex items-center justify-center transition-all duration-300"
+                >
                   <feature.icon className={`w-6 h-6 ${feature.color}`} />
-                </div>
+                </motion.div>
                 <div>
-                  <h4 className="text-lg font-caro-pro font-semibold text-gray-900 mb-2">
+                  <h4 className="text-lg font-caro-pro font-semibold text-cppay-text mb-2">
                     {feature.title}
                   </h4>
-                  <p className="text-gray-600 text-sm leading-relaxed font-caro-pro">
+                  <p className="text-cppay-text-secondary text-sm leading-relaxed font-caro-pro">
                     {feature.description}
                   </p>
                 </div>
@@ -198,13 +209,13 @@ const FeaturesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white rounded-3xl p-8 md:p-12 shadow-lg"
+          className="bg-gradient-to-br from-cppay-navy-50 to-white rounded-3xl p-8 md:p-12 shadow-lg shadow-cppay-navy-500/5 border border-cppay-navy-100/50"
         >
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-caro-pro font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl md:text-3xl font-caro-pro font-bold bg-gradient-to-r from-cppay-navy-500 to-cppay-sky-500 bg-clip-text text-transparent mb-4">
               Your Journey to Gasless Payments
             </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto font-caro-pro">
+            <p className="text-cppay-text-secondary max-w-2xl mx-auto font-caro-pro">
               Getting started with CPPay is simple. Follow these easy steps to
               unlock instant financial freedom.
             </p>
@@ -243,21 +254,31 @@ const FeaturesSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="relative group"
               >
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#0973b4] rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div className="text-center p-6 rounded-2xl bg-white hover:bg-cppay-sky-50 transition-all duration-300 hover:shadow-lg hover:shadow-cppay-sky-500/10 border border-cppay-border/50 hover:border-cppay-sky-500/30">
+                  <motion.div
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    className="w-16 h-16 bg-gradient-to-br from-cppay-sky-500 to-cppay-sky-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl shadow-lg shadow-cppay-sky-500/30"
+                  >
                     {item.step}
-                  </div>
-                  <h4 className="text-lg font-caro-pro font-semibold text-gray-900 mb-3">
+                  </motion.div>
+                  <h4 className="text-lg font-caro-pro font-semibold text-cppay-text mb-3 group-hover:text-cppay-sky-500 transition-colors duration-300">
                     {item.title}
                   </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed font-caro-pro">
+                  <p className="text-sm text-cppay-text-secondary leading-relaxed font-caro-pro">
                     {item.description}
                   </p>
                 </div>
                 {index < 3 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-gray-800 to-gray-700 transform -translate-x-8"></div>
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}
+                    className="hidden md:block absolute top-8 left-full w-full h-1 bg-gradient-to-r from-cppay-sky-500 via-cppay-sky-400 to-transparent transform -translate-x-8"
+                  />
                 )}
               </motion.div>
             ))}
